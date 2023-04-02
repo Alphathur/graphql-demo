@@ -8,13 +8,13 @@ import org.springframework.graphql.execution.RuntimeWiringConfigurer;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AuthorWiring implements RuntimeWiringConfigurer {
+public class CustomerWiring implements RuntimeWiringConfigurer {
 
     private final PostRepository postRepository;
 
     private final AuthorRepository authorRepository;
 
-    public AuthorWiring(PostRepository postRepository, AuthorRepository authorRepository) {
+    public CustomerWiring(PostRepository postRepository, AuthorRepository authorRepository) {
         this.postRepository = postRepository;
         this.authorRepository = authorRepository;
     }

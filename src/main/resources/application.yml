@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: graphql-demo
+  datasource:
+    url: jdbc:mysql://localhost:3306/graphql?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+    deserialization:
+      fail-on-unknown-properties: false
+  jpa:
+    properties:
+      hibernate:
+        physical_naming_strategy: io.hypersistence.utils.hibernate.naming.CamelCaseToSnakeCaseNamingStrategy
+    show-sql: true
+    hibernate:
+      ddl-auto: none

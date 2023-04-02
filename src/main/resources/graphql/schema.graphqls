@@ -1,0 +1,28 @@
+schema {
+    query: Query
+}
+
+type Query {
+    author(id:Int): Author
+    allAuthors: [Author]
+    post(id:Int): Post
+    allPosts: [Post]
+}
+
+type Post {
+    id:Int
+    authorId:Int
+    title:String
+    content:String
+    date:String
+    author:Author
+}
+
+type Author {
+    id:Int
+    firstName:String
+    lastName:String
+    email:String
+    birthdate:String
+}
+
